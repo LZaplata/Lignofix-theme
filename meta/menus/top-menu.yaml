@@ -1,0 +1,37 @@
+items:
+    -
+        title: Stachema
+        type: url
+        url: 'https://www.stachema.cz'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: 'Přísady do betonu'
+        nesting: null
+        type: url
+        url: 'https://prisadydobetonu.stachema.cz/'
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: Laguna
+        nesting: null
+        type: url
+        url: 'https://www.mojelaguna.cz/'
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+name: 'Top menu'

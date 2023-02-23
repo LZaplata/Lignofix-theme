@@ -1,0 +1,129 @@
+url = "/"
+layout = "default"
+title = "Úvod"
+
+[collection slides]
+handle = "Slider\Slide"
+
+[categories categorieshp]
+page = "produkty"
+
+[collection contacts_categories]
+handle = "Contacts\Category"
+
+[collection merchandise_places]
+handle = "Merchandise\Place"
+
+[collection videos]
+handle = "Videos\Video"
+
+[blogPosts postshp]
+pageNumber = "{{ :page }}"
+categoryFilter = "aktuality"
+postsPerPage = 5
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at desc"
+categoryPage = "homepage"
+postPage = "aktualita"
+==
+{% if slides.getIterator().count %}
+    <div class="swiper slider-swiper">
+        <div class="swiper-wrapper">
+            {% for slide in slides %}
+                <div class="swiper-slide">
+                    {% if slide.link %}
+                        <a href="{{ slide.link }}">
+                    {% endif %}
+                            <picture>
+                                <source media="(min-width:768px)" srcset="{{ slide.image_lg.thumb(1920, 550, {"mode": "crop"}) }}">
+
+                                <img src="{{ slide.image_sm.thumb(640, 640, {"mode": "crop"}) }}" alt="{{ slide.image_sm.description }}" class="img-fluid w-100">
+                            </picture>
+                    {% if slide.link %}
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="swiper-button-next rounded-circle transition">
+            <span></span>
+        </div>
+
+        <div class="swiper-button-prev rounded-circle transition">
+            <span></span>
+        </div>
+    </div>
+{% endif %}
+
+<div class="container-fluid py-5 bg-gray-light" id="crossroad">
+    <div class="container-lg py-xl-4">
+        <div class="row row-cols-1 g-4 row-cols-sm-2 row-cols-lg-3">
+            <div class="col">
+                <div class="d-flex flex-column gap-3 position-relative">
+                    <a href="{{ 'produkty'|page }}" class="transition rounded-4 overflow-hidden">
+                        <p class="img mb-0 position-relative">
+                            <img src="{{ 'assets/images/crossroad/01.webp'|theme }}" alt="Stachema" class="img-fluid w-100">
+
+                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>
+                        </p>
+
+                        <div class="position-absolute start-0 bottom-0 p-32">
+                            <h3 class="title fs-32 ls-n03 text-white transition">
+                                Produkty
+                            </h3>
+
+                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">
+                                Vyberte si ze široké škály našich produktů na všechny typy dřev.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column gap-3 position-relative">
+                    <a href="https://www.stachema.cz" target="_blank" class="transition rounded-4 overflow-hidden">
+                        <p class="img mb-0 position-relative">
+                            <img src="{{ 'assets/images/crossroad/02.webp'|theme }}" alt="Stachema" class="img-fluid w-100">
+
+                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>
+                        </p>
+
+                        <div class="position-absolute start-0 bottom-0 p-32">
+                            <h3 class="title fs-32 ls-n03 text-white transition">
+                                Stachema
+                            </h3>
+
+                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">
+                                Potřebujete informace o dalších produktech, které vyrábíme? Podívejte se na naše stránky.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column gap-3 position-relative">
+                    <a href="{{ 'produkty'|page }}" class="transition rounded-4 overflow-hidden">
+                        <p class="img mb-0 position-relative">
+                            <img src="{{ 'assets/images/crossroad/03.webp'|theme }}" alt="Stachema" class="img-fluid w-100">
+
+                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>
+                        </p>
+
+                        <div class="position-absolute start-0 bottom-0 p-32">
+                            <h3 class="title fs-32 ls-n03 text-white transition">
+                                Příběh
+                            </h3>
+
+                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">
+                                Přečtěte si příběh Lenky a poslechněte si co Vám řekne.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

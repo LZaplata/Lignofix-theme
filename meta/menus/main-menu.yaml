@@ -1,0 +1,15 @@
+items:
+    -
+        title: Produkty
+        nesting: null
+        type: cms-page
+        url: null
+        code: produkty
+        reference: produkty
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Main menu'

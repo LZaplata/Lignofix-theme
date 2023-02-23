@@ -1,0 +1,76 @@
+<footer>
+    <div class="container-fluid bg-primary text-white py-5" id="footer">
+        <div class="container-lg py-xl-2">
+            <div class="row row-cols-1 g-5 row-cols-sm-2 row-cols-lg-4">
+                <div class="col">
+                    <p class="fs-13 fw-semibold">
+                        STACHEMA CZ s.r.o.
+                    </p>
+
+                    <p class="mb-0 fs-13 ls-n02">
+                        Hasičská 1 <br>
+                        280 02 Zibohlavy
+                    </p>
+                </div>
+
+                <div class="col">
+                    <p class="fs-13 fw-semibold">
+                        Lignofix vyrábí: <br>
+                        Divize Chemické přípravky
+                    </p>
+
+                    <p class="mb-0 fs-13 ls-n02">
+                        Sokolská 1041 <br>
+                        276 01 Mělník
+                    </p>
+                </div>
+
+                <div class="col">
+                    <p class="fs-13 fw-semibold">
+                        Kontakt
+                    </p>
+
+                    {% if this.theme.phone %}
+                        <p class="fs-13 ls-n02 mb-0 d-flex align-items-center">
+                            <span class="mi-phone mi-16 bg-phosphorus"></span>
+
+                            <a href="tel:{{ this.theme.phone }}" target="_blank" class="text-decoration-none-w-hover text-white transition ms-2">
+                                {{ this.theme.phone }}
+                            </a>
+                        </p>
+                    {% endif %}
+
+                    {% if this.theme.email %}
+                        <p class="fs-13 ls-n02 mb-0 mt-1 d-flex align-items-center">
+                            <span class="mi-paper-plane mi-16 bg-phosphorus"></span>
+
+                            <a href="mailto:{{ this.theme.email }}" target="_blank" class="text-decoration-none-w-hover text-white transition ms-2">
+                                {{ this.theme.email }}
+                            </a>
+                        </p>
+                    {% endif %}
+                </div>
+
+                <div class="col">
+                    <p class="fs-13 fw-semibold">
+                        Užitečné odkazy
+                    </p>
+
+                    {% component "links" %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-primary text-white py-3 border-1 border-top border-black" id="copyright">
+        <div class="container-lg d-flex align-items-center justify-content-between">
+            <p class="mb-0 fs-12 text-white opacity-55">
+                &copy; {{ "now"|date("Y") }}, STACHEMA CZ s.r.o.
+            </p>
+
+            <p class="mb-0 d-inline-flex align-items-end">
+                <a href="https://www.hucr.cz" target="_blank" class="mi-signature bg-white opacity-55 opacity-100-hover transition"></a>
+            </p>
+        </div>
+    </div>
+</footer>
