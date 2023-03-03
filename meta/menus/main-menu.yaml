@@ -14,9 +14,22 @@ items:
             isExternal: '0'
     -
         title: 'Časté dotazy'
+        nesting: null
         type: cms-page
+        url: null
         code: faq
         reference: caste-dotazy
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'O nás'
+        type: cms-page
+        code: ''
+        reference: o-nas
         viewBag:
             isHidden: '0'
             cssClass: ''
