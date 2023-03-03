@@ -26,10 +26,23 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'O nás'
+        title: 'Ke stažení'
         type: cms-page
         code: ''
+        reference: ke-stazeni
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'O nás'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
         reference: o-nas
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
