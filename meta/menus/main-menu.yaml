@@ -12,4 +12,13 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+    -
+        title: 'Časté dotazy'
+        type: cms-page
+        code: faq
+        reference: caste-dotazy
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
 name: 'Main menu'

@@ -1,0 +1,49 @@
+title = "Časté dotazy"
+layout = "default"
+url = "/caste-dotazy"
+
+[collection questions]
+handle = "FAQ\Question"
+==
+{% set items = {
+    "faq": {
+        "title": "Časté dotazy",
+        "active": true,
+    }
+} %}
+
+{% partial "breadcrumb" items=items %}
+
+<div class="container-fluid pb-5" id="faq">
+    <div class="container-lg pt-xl-4">
+        <h1 class="mb-4 mb-xl-5">
+            {{ this.page.title }}
+        </h1>
+
+        <div class="accordion border-1 border-bottom border-tertiary border-opacity-07" id="faq-questions">
+            {% for question in questions %}
+                <div class="accordion-item border-1 border-top border-tertiary border-opacity-07">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fs-20 fw-medium ls-n02" data-bs-toggle="collapse" data-bs-target="#question-{{ question.id }}">
+                            <span class="ff-inter fs-15 fw-semibold ls-n02 text-primary mi-40 d-inline-flex align-items-center justify-content-center bg-gray-200 rounded-circle me-3">
+                                {{ loop.index }}
+                            </span>
+
+                            {{ question.title }}
+                        </button>
+                    </h2>
+
+                    <div id="question-{{ question.id }}" class="accordion-collapse collapse" data-bs-parent="#faq-questions">
+                        <div class="accordion-body post-content pb-3 px-0 pt-0 mx-0 w-100">
+                            {{ question.answer|raw }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container-lg mt-5 py-xl-4">
+        {% partial "advice" %}
+    </div>
+</div>
