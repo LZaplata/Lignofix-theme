@@ -27,9 +27,22 @@ items:
             isExternal: '0'
     -
         title: 'Ke stažení'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: ke-stazeni
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakty
+        type: cms-page
+        code: ''
+        reference: kontakty
         viewBag:
             isHidden: '0'
             cssClass: ''
