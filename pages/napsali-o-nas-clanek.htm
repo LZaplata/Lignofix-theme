@@ -1,0 +1,32 @@
+url = "/napsali-o-nas/clanek/:slug"
+layout = "default"
+title = "Napsali o nás"
+
+[blogPost post]
+slug = "{{ :slug }}"
+categoryPage = "napsali-o-nas"
+==
+<?php
+function onInit() {
+    $this["activeMenuItem"] = "napsali-o-nas";
+}
+?>
+==
+{% set items = {
+    "news": {
+        "title" : "Napsali o nás",
+        "url"   : "napsali-o-nas"|page,
+    },
+    "post": {
+        "title" : post.title,
+        "active": true,
+    }
+} %}
+
+{% partial "breadcrumb" items=items %}
+
+<div class="container-fluid pb-5" id="post">
+    <div class="container-lg py-xl-4">
+        {% component "post" %}
+    </div>
+</div>

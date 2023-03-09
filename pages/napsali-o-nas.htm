@@ -1,0 +1,37 @@
+title = "Napsali o nás"
+layout = "default"
+url = "/napsali-o-nas/:page?"
+
+[blogPosts news]
+pageNumber = "{{ :page }}"
+categoryFilter = "napsali-o-nas"
+postsPerPage = 12
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at desc"
+categoryPage = "napsali-o-nas"
+postPage = "napsali-o-nas-clanek"
+==
+<?php
+function onInit() {
+    $this["activeMenuItem"] = "napsali-o-nas";
+}
+?>
+==
+{% set items = {
+    "news": {
+        "title": "Napsali o nás",
+        "active": true,
+    }
+} %}
+
+{% partial "breadcrumb" items=items %}
+
+<div class="container-fluid pb-5" id="news">
+    <div class="container-lg py-xl-4">
+        <h1 class="mb-4 mb-xl-5">
+            {{ this.page.title }}
+        </h1>
+
+        {% component "news" %}
+    </div>
+</div>
