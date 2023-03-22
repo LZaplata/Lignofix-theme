@@ -7,9 +7,23 @@
                         STACHEMA CZ s.r.o.
                     </p>
 
-                    <p class="mb-0 fs-13 ls-n02">
+                    <p class="mb-5 fs-13 ls-n02">
                         Hasičská 1 <br>
                         280 02 Zibohlavy
+                    </p>
+
+                    <p class="mb-0 mt-sm-auto d-flex gap-2">
+                        {% if this.theme.youtube %}
+                            <a href="{{ this.theme.youtube }}" target="_blank" class="mi-youtube-circle mi-32 bg-white opacity-65-hover transition"></a>
+                        {% endif %}
+
+                        {% if this.theme.facebook %}
+                            <a href="{{ this.theme.facebook }}" target="_blank" class="mi-facebook-circle mi-32 bg-white opacity-65-hover transition"></a>
+                        {% endif %}
+
+                        {% if this.theme.instagram %}
+                            <a href="{{ this.theme.instagram }}" target="_blank" class="mi-instagram-circle mi-32 bg-white opacity-65-hover transition"></a>
+                        {% endif %}
                     </p>
                 </div>
 
