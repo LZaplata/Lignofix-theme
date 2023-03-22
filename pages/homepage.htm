@@ -56,84 +56,84 @@ postPage = "aktualita"
     </div>
 {% endif %}
 
-<div class="container-fluid py-5 bg-gray-light" id="categories">
-    <div class="container-lg py-xl-4">
-        <h2 class="text-center mb-4 mb-xl-5">
-            Sortiment
-        </h2>
-
-        {% component "categorieshp" %}
-    </div>
-</div>
-
-{#<div class="container-fluid py-5 bg-gray-light" id="crossroad">#}
+{#<div class="container-fluid py-5 bg-gray-light" id="categories">#}
 {#    <div class="container-lg py-xl-4">#}
-{#        <div class="row row-cols-1 g-4 row-cols-sm-2 row-cols-lg-3">#}
-{#            <div class="col">#}
-{#                <div class="d-flex flex-column gap-3 position-relative">#}
-{#                    <a href="{{ 'produkty'|page }}" class="transition rounded-4 overflow-hidden">#}
-{#                        <p class="img mb-0 position-relative">#}
-{#                            <img src="{{ 'assets/images/crossroad/01.webp'|theme }}" alt="Stachema" class="img-fluid w-100">#}
+{#        <h2 class="text-center mb-4 mb-xl-5">#}
+{#            Sortiment#}
+{#        </h2>#}
 
-{#                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>#}
-{#                        </p>#}
-
-{#                        <div class="position-absolute start-0 bottom-0 p-32">#}
-{#                            <h3 class="title fs-32 ls-n03 text-white transition">#}
-{#                                Produkty#}
-{#                            </h3>#}
-
-{#                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">#}
-{#                                Vyberte si ze široké škály našich produktů na všechny typy dřev.#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
-{#            </div>#}
-
-{#            <div class="col">#}
-{#                <div class="d-flex flex-column gap-3 position-relative">#}
-{#                    <a href="https://www.stachema.cz" target="_blank" class="transition rounded-4 overflow-hidden">#}
-{#                        <p class="img mb-0 position-relative">#}
-{#                            <img src="{{ 'assets/images/crossroad/02.webp'|theme }}" alt="Stachema" class="img-fluid w-100">#}
-
-{#                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>#}
-{#                        </p>#}
-
-{#                        <div class="position-absolute start-0 bottom-0 p-32">#}
-{#                            <h3 class="title fs-32 ls-n03 text-white transition">#}
-{#                                Stachema#}
-{#                            </h3>#}
-
-{#                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">#}
-{#                                Potřebujete informace o dalších produktech, které vyrábíme? Podívejte se na naše stránky.#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
-{#            </div>#}
-
-{#            <div class="col">#}
-{#                <div class="d-flex flex-column gap-3 position-relative">#}
-{#                    <a href="{{ 'produkty'|page }}" class="transition rounded-4 overflow-hidden">#}
-{#                        <p class="img mb-0 position-relative">#}
-{#                            <img src="{{ 'assets/images/crossroad/03.webp'|theme }}" alt="Stachema" class="img-fluid w-100">#}
-
-{#                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>#}
-{#                        </p>#}
-
-{#                        <div class="position-absolute start-0 bottom-0 p-32">#}
-{#                            <h3 class="title fs-32 ls-n03 text-white transition">#}
-{#                                Příběh#}
-{#                            </h3>#}
-
-{#                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">#}
-{#                                Přečtěte si příběh Lenky a poslechněte si co Vám řekne.#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
+{#        {% component "categorieshp" %}#}
 {#    </div>#}
 {#</div>#}
+
+<div class="container-fluid py-5 bg-gray-light" id="crossroad">
+    <div class="container-lg py-xl-4">
+        <div class="row row-cols-1 g-4 row-cols-sm-2 row-cols-lg-3">
+            <div class="col">
+                <div class="d-flex flex-column gap-3 position-relative">
+                    <a href="{{ 'produkty'|page }}" class="transition rounded-4 overflow-hidden">
+                        <p class="img mb-0 position-relative">
+                            <img src="{{ 'assets/images/crossroad/01.webp'|theme }}" alt="Stachema" class="img-fluid w-100">
+
+                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>
+                        </p>
+
+                        <div class="position-absolute start-0 bottom-0 p-32">
+                            <h3 class="title fs-32 ls-n03 text-white transition">
+                                Produkty
+                            </h3>
+
+                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">
+                                Vyberte si ze široké škály našich produktů na všechny typy dřev.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column gap-3 position-relative">
+                    <a href="https://www.stachema.cz" target="_blank" class="transition rounded-4 overflow-hidden">
+                        <p class="img mb-0 position-relative">
+                            <img src="{{ 'assets/images/crossroad/02.webp'|theme }}" alt="Stachema" class="img-fluid w-100">
+
+                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>
+                        </p>
+
+                        <div class="position-absolute start-0 bottom-0 p-32">
+                            <h3 class="title fs-32 ls-n03 text-white transition">
+                                Stachema
+                            </h3>
+
+                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">
+                                Potřebujete informace o dalších produktech, které vyrábíme? Podívejte se na naše stránky.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="d-flex flex-column gap-3 position-relative">
+                    <a href="{{ 'produkty'|page }}" class="transition rounded-4 overflow-hidden">
+                        <p class="img mb-0 position-relative">
+                            <img src="{{ 'assets/images/crossroad/03.webp'|theme }}" alt="Stachema" class="img-fluid w-100">
+
+                            <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>
+                        </p>
+
+                        <div class="position-absolute start-0 bottom-0 p-32">
+                            <h3 class="title fs-32 ls-n03 text-white transition">
+                                Příběh
+                            </h3>
+
+                            <p class="excerpt mb-0 fs-16 lh-24 text-white ls-n03">
+                                Přečtěte si příběh Lenky a poslechněte si co Vám řekne.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
