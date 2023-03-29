@@ -7,24 +7,6 @@ handle = "Slider\Slide"
 
 [categories categorieshp]
 page = "kategorie"
-
-[collection contacts_categories]
-handle = "Contacts\Category"
-
-[collection merchandise_places]
-handle = "Merchandise\Place"
-
-[collection videos]
-handle = "Videos\Video"
-
-[blogPosts postshp]
-pageNumber = "{{ :page }}"
-categoryFilter = "aktuality"
-postsPerPage = 5
-noPostsMessage = "Nenalezeny žádné příspěvky"
-sortOrder = "published_at desc"
-categoryPage = "homepage"
-postPage = "aktualita"
 ==
 {% if slides.getIterator().count %}
     <div class="swiper slider-swiper">
