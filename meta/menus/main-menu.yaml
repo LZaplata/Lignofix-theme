@@ -67,8 +67,8 @@ items:
     -
         title: Videa
         type: cms-page
-        code: napsali-o-nas
-        reference: napsali-o-nas
+        code: videa
+        reference: videa
         viewBag:
             isHidden: '0'
             cssClass: ''
