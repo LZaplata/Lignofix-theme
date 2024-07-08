@@ -65,7 +65,7 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Napsali o nás'
+        title: Videa
         type: cms-page
         code: napsali-o-nas
         reference: napsali-o-nas

@@ -1,6 +1,6 @@
-url = "/napsali-o-nas/clanek/:slug"
+url = "/video/:slug"
 layout = "default"
-title = "Napsali o nás"
+title = "Video"
 
 [blogPost post]
 slug = "{{ :slug }}"
@@ -14,8 +14,8 @@ function onInit() {
 ==
 {% set items = {
     "news": {
-        "title" : "Napsali o nás",
-        "url"   : "napsali-o-nas"|page,
+        "title" : "Videa",
+        "url"   : "videa"|page,
     },
     "post": {
         "title" : post.title,
