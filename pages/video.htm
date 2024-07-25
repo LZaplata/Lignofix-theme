@@ -2,9 +2,9 @@ url = "/video/:slug"
 layout = "default"
 title = "Video"
 
-[blogPost post]
-slug = "{{ :slug }}"
-categoryPage = "videa"
+[section video]
+handle = "Videos\Video"
+value = "{{ :slug }}"
 ==
 <?php
 function onInit() {
@@ -13,20 +13,30 @@ function onInit() {
 ?>
 ==
 {% set items = {
-    "news": {
+    "videa": {
         "title" : "Videa",
         "url"   : "videa"|page,
     },
-    "post": {
-        "title" : post.title,
+    "video": {
+        "title" : video.title,
         "active": true,
     }
 } %}
 
 {% partial "breadcrumb" items=items %}
 
-<div class="container-fluid pb-5" id="post">
+<div class="container-fluid pb-5" id="video">
     <div class="container-lg py-xl-4">
-        {% component "post" %}
+        <h1 class="mb-4 mb-xl-5 col-xl-10 offset-xl-1">
+            {{ video.title }}
+        </h1>
+
+        <div class="post-content">
+            {{ video.text|raw }}
+        </div>
+
+        <div class="ratio ratio-16x9 mt-4 mt-xl-5">
+            {{ video.youtube_code|raw }}
+        </div>
     </div>
 </div>

@@ -2,8 +2,14 @@ url = "/videaa"
 layout = "default"
 title = "Videaa"
 
-[collection videos]
-handle = "Videos\Video"
+[blogPosts news]
+pageNumber = "{{ :page }}"
+categoryFilter = "videa"
+postsPerPage = 12
+noPostsMessage = "Nenalezeny žádné příspěvky"
+sortOrder = "published_at desc"
+categoryPage = "videa"
+postPage = "video"
 ==
 <?php
 function onInit() {
@@ -12,7 +18,7 @@ function onInit() {
 ?>
 ==
 {% set items = {
-    "videa": {
+    "news": {
         "title": "Videa",
         "active": true,
     }
@@ -20,18 +26,12 @@ function onInit() {
 
 {% partial "breadcrumb" items=items %}
 
-<div class="container-fluid pb-5" id="videos">
+<div class="container-fluid pb-5" id="news">
     <div class="container-lg py-xl-4">
         <h1 class="mb-4 mb-xl-5">
             {{ this.page.title }}
         </h1>
 
-        <div class="videos row row-cols-1 gy-5 gx-4 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gx-xxl-5">
-            {% for video in videos %}
-                <div class="video col">
-                    {% partial "video" video=video %}
-                </div>
-            {% endfor %}
-        </div>
+        {% component "news" %}
     </div>
 </div>
